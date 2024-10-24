@@ -36,7 +36,7 @@ variable "ssh_key_name" {
 
 variable "image_name" {
   type        = string
-  default     = "ubuntu-20-04-amd64"
+  default     = "ibm-ubuntu-20-04-6-minimal-amd64-6"
   description = "Image name for the Linux server"
 }
 
