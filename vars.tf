@@ -1,0 +1,51 @@
+variable "ibmcloud_api_key" {
+  type        = string
+  description = "IBM Cloud API key"
+}
+
+variable "region" {
+  type        = string
+  description = "IBM Cloud region"
+  default     = "us-east"
+}
+
+variable "vpc_name" {
+  type        = string
+  description = "Name of the VPC"
+}
+
+variable "subnet_name" {
+  type        = string
+  description = "Name of the Subnet"
+}
+
+variable "instance_name" {
+  type        = string
+  description = "Name of the OpenVPN instance"
+}
+
+variable "instance_profile" {
+  type        = string
+  description = "Profile for the instance"
+}
+
+variable "ssh_key_name" {
+  type        = string
+  description = "Name of the SSH key to attach"
+}
+
+variable "image_name" {
+  type        = string
+  default     = "ubuntu-20-04-amd64"
+  description = "Image name for the Linux server"
+}
+
+variable "security_group_name" {
+  type        = string
+  description = "Name of the security group"
+}
+
+variable "cidr_block" {
+  type        = string
+  description = "CIDR block for the subnet"
+}
