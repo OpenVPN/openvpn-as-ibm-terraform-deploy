@@ -12,6 +12,7 @@ variable "region" {
 variable "vpc_name" {
   type        = string
   description = "Name of the VPC"
+  default     = "openvpn-vpc"
 }
 
 variable "subnet_name" {
