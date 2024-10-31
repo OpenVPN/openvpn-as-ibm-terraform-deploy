@@ -9,6 +9,12 @@ variable "region" {
   default     = "us-east"
 }
 
+variable "zone_region" {
+  type        = string
+  description = "IBM Cloud region"
+  default     = "us-east-1"
+}
+
 variable "vpc_name" {
   type        = string
   description = "Name of the VPC"

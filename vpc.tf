@@ -6,7 +6,7 @@ resource "ibm_is_subnet" "subnet" {
   vpc             = ibm_is_vpc.vpc.id
   name            = var.subnet_name
   ipv4_cidr_block = var.cidr_block
-  zone            = var.region
+  zone            = var.zone_region
 }
 
 resource "ibm_is_security_group" "sg" {
