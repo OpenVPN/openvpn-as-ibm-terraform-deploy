@@ -2,7 +2,7 @@ resource "ibm_is_instance" "openvpn_instance" {
   name    = var.instance_name
   vpc     = ibm_is_vpc.vpc.id
   profile = var.instance_profile
-  zone    = var.region
+  zone    = var.zone_region
   image   = data.ibm_is_image.linux_image.id
   primary_network_interface {
     subnet          = ibm_is_subnet.subnet.id
