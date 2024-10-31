@@ -12,8 +12,8 @@ resource "ibm_is_instance" "openvpn_instance" {
     subnet          = ibm_is_subnet.subnet.id
     security_groups = [ibm_is_security_group.sg.id]
   }
-  keys      = [var.ssh_public_key]
-  user_data = file("${path.module}/user_data.conf")
+  user_data = data.template_file.userdata.rendered
+  keys      = [data.ibm_is_ssh_key.ssh_key.id]
 }
 
 data "template_file" "userdata" {
