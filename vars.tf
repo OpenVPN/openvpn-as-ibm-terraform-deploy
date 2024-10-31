@@ -38,7 +38,7 @@ variable "instance_name" {
   default     = "openvpn-as-server"
 }
 
-variable "profile" {
+variable "instance_profile" {
   default     = "cx2-2x4"
   description = "VM size and family"
 }
