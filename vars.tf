@@ -29,7 +29,7 @@ variable "vpc_name" {
 variable "subnet_name" {
   type        = string
   description = "Name of the Subnet"
-  default = "openvpn-subnet"
+  default     = "openvpn-subnet"
 }
 
 variable "instance_name" {
@@ -52,7 +52,7 @@ variable "image_name" {
 variable "security_group_name" {
   type        = string
   description = "Name of the security group"
-  default = "openvpn-sg"
+  default     = "openvpn-sg"
 }
 
 variable "cidr_block" {
