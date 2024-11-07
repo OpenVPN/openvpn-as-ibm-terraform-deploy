@@ -61,6 +61,6 @@ variable "cidr_block" {
 }
 
 variable "user_data" {
-  default = "install.sh"
+  default     = "install.sh"
   description = "The Bootstrap Script."
 }
