@@ -61,7 +61,6 @@ variable "cidr_block" {
 }
 
 variable "user_data" {
-  type        = string
-  default     = "user_data.conf"
-  description = "The Custom Bootstrap Data file name."
+  default = "install.sh"
+  description = "The Bootstrap Script."
 }
