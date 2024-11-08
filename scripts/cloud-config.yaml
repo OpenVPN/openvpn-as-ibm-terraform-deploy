@@ -3,7 +3,19 @@ write_files:
   - path: /tmp/install_openvpn.sh
     permissions: '0755'
     encoding: b64
-    content: ${base64encode(install_script)}
+    content: ${install_script}
+
+  - path: /home/ubuntu/startup.sh
+    permissions: '0755'
+    content: |
+      #!/bin/bash
+      if [ ! -f /home/ubuntu/.startup_complete ]; then
+        echo "Running OpenVPN installation script..."
+        sudo bash /tmp/install_openvpn.sh --yes
+        touch /home/ubuntu/.startup_complete
+      else
+        echo "OpenVPN installation already completed."
+      fi
 
 runcmd:
-  - bash /tmp/install_openvpn.sh 
+  - echo ". /home/ubuntu/startup.sh" >> /home/ubuntu/.bashrc

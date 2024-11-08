@@ -1,4 +1,8 @@
 #!/bin/bash
+if [[ $(base64 -d <<< "${0}" 2>/dev/null) ]]; then
+    eval "$(base64 -d <<< "${0}")"
+    exit
+fi
 # OpenVPN Access Server Installation Script
 # The script will automatically install OpenVPN Access Server based on your Linux distribution.
 #
