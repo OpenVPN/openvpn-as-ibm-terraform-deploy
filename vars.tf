@@ -65,8 +65,3 @@ variable "cidr_block" {
   type        = string
   description = "CIDR block for the subnet"
 }
-
-variable "user_data" {
-  default     = "install.sh"
-  description = "The Bootstrap Script."
-}

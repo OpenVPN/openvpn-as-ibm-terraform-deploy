@@ -2,20 +2,41 @@
 write_files:
   - path: /tmp/install_openvpn.sh
     permissions: '0755'
-    encoding: b64
     content: ${install_script}
 
-  - path: /home/ubuntu/startup.sh
+  - path: /tmp/setup_startup.sh
     permissions: '0755'
     content: |
       #!/bin/bash
-      if [ ! -f /home/ubuntu/.startup_complete ]; then
+      # Detect the Linux distribution and set the appropriate home directory
+      if [ -f /etc/os-release ]; then
+        . /etc/os-release
+        case $ID in
+          ubuntu|debian) HOME_DIR="/home/ubuntu" ;;
+          rhel|centos|rocky|almalinux|ol) HOME_DIR="/home/cloud-user" ;;
+          *) HOME_DIR="/root" ;;
+        esac
+      else
+        HOME_DIR="/root"
+      fi
+
+      # Create the startup script
+      cat << EOF > $HOME_DIR/startup.sh
+      #!/bin/bash
+      if [ ! -f $HOME_DIR/.startup_complete ]; then
         echo "Running OpenVPN installation script..."
         sudo bash /tmp/install_openvpn.sh --yes
-        touch /home/ubuntu/.startup_complete
+        touch $HOME_DIR/.startup_complete
       else
         echo "OpenVPN installation already completed."
       fi
+      EOF
+
+      # Set permissions
+      chmod +x $HOME_DIR/startup.sh
+
+      # Add to .bashrc
+      echo ". $HOME_DIR/startup.sh" >> $HOME_DIR/.bashrc
 
 runcmd:
-  - echo ". /home/ubuntu/startup.sh" >> /home/ubuntu/.bashrc
+  - bash /tmp/setup_startup.sh
