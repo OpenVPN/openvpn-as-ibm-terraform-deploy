@@ -55,6 +55,12 @@ variable "security_group_name" {
   default     = "openvpn-sg"
 }
 
+variable "public_gateway_name" {
+  type        = string
+  description = "Name of the public gateway"
+  default     = "openvpn-pgw"
+}
+
 variable "cidr_block" {
   type        = string
   description = "CIDR block for the subnet"
