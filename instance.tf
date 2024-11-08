@@ -14,8 +14,10 @@ resource "ibm_is_instance" "openvpn_instance" {
     security_groups = [ibm_is_security_group.sg.id]
   }
 
-  user_data = file(var.user_data)
-  keys      = [data.ibm_is_ssh_key.ssh_key.id]
+  user_data = templatefile("${path.root}/scripts/cloud-config.yaml", {
+    install_script = file("${path.root}/scripts/install.sh")
+  })
+  keys = [data.ibm_is_ssh_key.ssh_key.id]
 }
 
 resource "ibm_is_floating_ip" "openvpn" {

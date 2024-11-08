@@ -1,0 +1,11 @@
+#cloud-config
+write_files:
+  - path: /tmp/install_openvpn.sh
+    permissions: '0755'
+    encoding: b64
+    content: ${base64encode(install_script)}
+
+runcmd:
+  - echo "Starting OpenVPN installation" >> /var/log/openvpn-install.log
+  - bash /tmp/install_openvpn.sh >> /var/log/openvpn-install.log 2>&1
+  - echo "OpenVPN installation completed" >> /var/log/openvpn-install.log
