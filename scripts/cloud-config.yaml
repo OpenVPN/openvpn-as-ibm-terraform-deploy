@@ -13,7 +13,7 @@ write_files:
       FLAG_FILE="$HOME/.startup_complete"
       if [ ! -f "$FLAG_FILE" ]; then
           echo "Running OpenVPN installation script..."
-          sudo bash /tmp/install_openvpn.sh --yes
+          sudo bash /tmp/install_openvpn.sh
           touch "$FLAG_FILE"
       fi
 
