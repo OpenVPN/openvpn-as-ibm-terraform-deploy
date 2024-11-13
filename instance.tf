@@ -15,7 +15,7 @@ resource "ibm_is_instance" "openvpn_instance" {
   }
 
   user_data = templatefile("${path.root}/scripts/cloud-config.yaml", {
-    install_script = file("${path.root}/scripts/install.sh")
+    install_script_base64 = base64encode(file("${path.root}/scripts/install.sh"))
   })
   keys = [data.ibm_is_ssh_key.ssh_key.id]
 }
