@@ -14,15 +14,15 @@ This Terraform project automates the deployment of an **OpenVPN Access Server**.
 The key variables include:
 
 - `ibmcloud_api_key`: IBM Cloud API key for authentication.
-- `region`: The region where resources will be deployed (e.g., `us-east`).
+- `region`: The region where resources will be deployed (`us-east`).
 - `vpc_name`: Name of the VPC.
 - `subnet_name`: Name of the subnet.
 - `instance_name`: Name of the OpenVPN instance.
-- `instance_profile`: Instance profile (e.g., `bx2-2x8`).
+- `instance_profile`: Instance profile (`bx2-2x8`).
 - `ssh_key_name`: SSH key to access the instance.
 - `security_group_name`: Name of the security group.
-- `cidr_block`: CIDR block for the subnet (e.g., `10.0.0.0/24`).
-- `image_name`: Base Linux image (e.g., `ubuntu-20-04-amd64`).
+- `cidr_block`: CIDR block for the subnet (`10.0.0.0/24`).
+- `image_name`: Base Linux image (`ubuntu-20-04-amd64`).
 
 ## Project Structure
 
