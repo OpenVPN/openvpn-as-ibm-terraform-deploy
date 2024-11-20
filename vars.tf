@@ -65,3 +65,13 @@ variable "cidr_block" {
   type        = string
   description = "CIDR block for the subnet"
 }
+
+variable "dns_zone_name" {
+  type        = string
+  description = "The DNS zone name where the entry should be created."
+}
+
+variable "dns_entry_name" {
+  type        = string
+  description = "The DNS entry name to create."
+}
