@@ -75,3 +75,15 @@ variable "dns_entry_name" {
   type        = string
   description = "The DNS entry name to create."
 }
+
+variable "create_vpc" {
+  type        = bool
+  description = "Set to true to create a new VPC, false to use an existing VPC"
+  default     = false
+}
+
+variable "existing_vpc_name" {
+  type        = string
+  description = "Name of the existing VPC to use when create_vpc is false"
+  default     = ""
+}

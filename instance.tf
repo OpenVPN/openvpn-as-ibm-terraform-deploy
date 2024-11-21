@@ -4,7 +4,7 @@ data "ibm_is_ssh_key" "ssh_key" {
 
 resource "ibm_is_instance" "openvpn_instance" {
   name    = var.instance_name
-  vpc     = ibm_is_vpc.vpc.id
+  vpc     = var.create_vpc ? ibm_is_vpc.vpc[0].id : data.ibm_is_vpc.existing_vpc[0].id
   profile = var.instance_profile
   zone    = var.zone_region
   image   = data.ibm_is_image.linux_image.id
@@ -19,7 +19,6 @@ resource "ibm_is_instance" "openvpn_instance" {
   })
   keys = [data.ibm_is_ssh_key.ssh_key.id]
 }
-
 resource "ibm_is_floating_ip" "openvpn" {
   name   = "openvpn-floating-ip"
   target = ibm_is_instance.openvpn_instance.primary_network_interface[0].id
