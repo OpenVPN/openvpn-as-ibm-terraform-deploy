@@ -68,12 +68,12 @@ variable "cidr_block" {
 
 variable "dns_domain_name" {
   type        = string
-  description = "Name of the DNS domain (e.g., example.com)"
+  description = "Name of the DNS domain (example.com)"
 }
 
 variable "dns_entry_name" {
   type        = string
-  description = "DNS entry name (e.g., www)"
+  description = "DNS entry name (www)"
 }
 
 variable "responsible_person" {
