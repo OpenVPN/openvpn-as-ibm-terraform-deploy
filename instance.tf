@@ -24,16 +24,15 @@ resource "ibm_is_floating_ip" "openvpn" {
   target = ibm_is_instance.openvpn_instance.primary_network_interface[0].id
 }
 
-resource "ibm_is_dns_zone" "dns_zone" {
-  name        = var.dns_zone_name
-  label       = "openvpn-zone"
-  description = "DNS zone for OpenVPN server"
+resource "ibm_dns_domain" "dns_domain" {
+  name = var.dns_domain_name
 }
 
-resource "ibm_is_dns_record" "openvpn_dns_record" {
-  zone       = ibm_is_dns_zone.dns_zone.id
-  name       = var.dns_entry_name
-  type       = "A"
-  ttl        = 300 
-  addresses  = [ibm_is_floating_ip.openvpn.address]
+resource "ibm_dns_record" "openvpn_dns_record" {
+  data               = ibm_is_floating_ip.openvpn.address
+  domain_id          = ibm_dns_domain.dns_domain.id
+  host               = var.dns_entry_name
+  responsible_person = var.responsible_person
+  ttl                = 900
+  type               = "A"
 }

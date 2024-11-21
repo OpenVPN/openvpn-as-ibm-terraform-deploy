@@ -66,15 +66,22 @@ variable "cidr_block" {
   description = "CIDR block for the subnet"
 }
 
-variable "dns_zone_name" {
+variable "dns_domain_name" {
   type        = string
-  description = "The DNS zone name where the entry should be created."
+  description = "Name of the DNS domain (e.g., example.com)"
 }
 
 variable "dns_entry_name" {
   type        = string
-  description = "The DNS entry name to create."
+  description = "DNS entry name (e.g., www)"
 }
+
+variable "responsible_person" {
+  type        = string
+  description = "Email address of the responsible person for the DNS entry"
+  default     = "admin@example.com"
+}
+
 
 variable "create_vpc" {
   type        = bool
