@@ -34,5 +34,5 @@ resource "ibm_dns_record" "openvpn_dns_record" {
   host               = var.dns_entry_name
   responsible_person = var.responsible_person
   ttl                = 900
-  type               = "A"
+  type               = "a"
 }
