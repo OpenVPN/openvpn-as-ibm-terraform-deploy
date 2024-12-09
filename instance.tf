@@ -25,14 +25,19 @@ resource "ibm_is_floating_ip" "openvpn" {
 }
 
 resource "ibm_dns_domain" "dns_domain" {
+  count = var.dns_create ? 1 : 0
+
   name = var.dns_domain_name
 }
 
 resource "ibm_dns_record" "openvpn_dns_record" {
+  count = var.dns_create ? 1 : 0
+
   data               = ibm_is_floating_ip.openvpn.address
-  domain_id          = ibm_dns_domain.dns_domain.id
+  domain_id          = ibm_dns_domain.dns_domain[0].id
   host               = var.dns_entry_name
   responsible_person = var.responsible_person
   ttl                = 900
   type               = "a"
 }
+

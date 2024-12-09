@@ -1,205 +1,258 @@
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+# OpenVPN End User License Agreement, Access Server  
+**Latest revision date:** October 1, 2024  
+**Copyright Notice:** OpenVPN Access Server License; Copyright (c) 2009-2024  
+OpenVPN Inc. All rights reserved. “OpenVPN” is a trademark of OpenVPN Inc.
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+This OpenVPN Access Server End User License Agreement (the “End User License  
+Agreement”) sets forth the terms of the license OpenVPN Inc. (”we” or “OpenVPN”)  
+grants an authorized user of OpenVPN’s Access Server (“Access Server”). For the  
+purposes of this End User License Agreement, references to “you” and “your” will be  
+to an authorized user of Access Server.
 
-   1. Definitions.
+To be an authorized user, you must accept the terms of the OpenVPN Master  
+Product and Services Agreement (the “Master Agreement”), complete and agree to a  
+Product and Service Order under which the Recipient has subscribed to purchase a  
+license to Access Server (the “Product and Service Order”), and OpenVPN must  
+have accepted that subscription. All terms of the Master Agreement and the Product  
+and Service Order are incorporated by reference into this End User License  
+Agreement except where End User License Agreement specifically states otherwise.
 
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
+## 1. License Grant.
+Subject to the terms and conditions of this End User License Agreement, the Master Agreement and the Product and Service Order, OpenVPN grants you a nonexclusive, nontransferable license to use Access Server on a number of servers specified in the Product and Service Order for your business or personal use during the subscription term set forth in the Product and Service Order. You may use Access Server solely for your own lawful business or personal purposes and, except to the extent that redistribution of Access Server is permitted under Section 3, you may not distribute Access Server to any other person in any manner.
 
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
+## 2. Open Source Licenses.
+Access Server is bundled with open source software components, some of which have different licenses. By using Access Server or any of the bundled components, you agree to be bound by the conditions of the license for each respective component as well as this End User License Agreement.
 
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
+## 3. Transfer and Redistribution of Licenses.
+You may redistribute Access Server binary forms and related documents if those redistributions of Access Server binary forms and related documents reproduce the above copyright notice as well as a complete copy of this End User License Agreement. A copy of this End User License Agreement is distributed with the Access Server in the file `/usr/local/openvpn_as/license.txt`. In no event will your redistribution of the binary forms and related documents for Access Server permit you to exceed the number of users or devices for which you subscribed in the Product and Service Order.
 
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
+## 4. Limitation on Distribution.
+Except as permitted in Section 3, you may not assign, sublicense, distribute, or otherwise transfer your license to Access Server or your rights or obligations under this End User License Agreement, agreement and licenses granted by it may not be assigned, sublicensed, or otherwise transferred by you or any of your successors or assigns (including, but not limited to, by means of a change of control or operation of law) without our prior written consent, which we may grant or deny in our sole discretion. We may revoke any license, and may deactivate your license to Access Server, if you transfer or copy Access Server or your license to Access Server in violation of this End User License Agreement.
 
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
+## 5. No Reverse Engineering.
+You agree not to reverse engineer, decompile, disassemble, modify, translate, make any attempt to discover the source code for Access Server, or create derivative works from Access Server.
 
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
+## 6. Disclaimer of Warranties.
+ACCESS SERVER IS PROVIDED TO YOU “AS IS” AND “WITH ALL FAULTS.” OPENVPN EXPRESSLY DISCLAIMS ALL EXPRESS WARRANTIES, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT ACCESS SERVER WILL COMPLY WITH ITS SPECIFICATIONS OR OPERATE ERROR FREE, AND ALL IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO THE WARRANTY OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE WITH RESPECT TO ACCESS SERVER.
 
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
+## 7. Subscription License Key:
+Entitles you to use Access Server for the duration of term of your subscription up to the concurrent user limit specified by your subscription. This license permits you to use Access Server on one or more servers, provided that in no event will the number of concurrent VPN connections that all servers may allow exceed the concurrent user limit. Upon activation of the first purchased activation key for Access Server, you agree to forego any free licenses or keys that were given to you for demonstration purposes, and as such, the free licenses will not appear after the activation of a purchased key. You are responsible for the timely activation of these licenses on the server or servers of your choice.
 
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
+## 8. Refunds.
+Refunds on purchased activation keys are only possible within 30 days of purchase of activation key, and then only if the activation key has not already been activated on a system. To request a refund, you must contact us through our support ticket system using the account you have used to purchase the activation key. Activated subscriptions are nontransferable. An Access Server subscription entitles the use of (1) subscription license key on a single server or across multiple servers. Once an activated key expires or becomes invalid, the concurrency limit on Access Server will revert to demonstration mode, which allows a maximum of two (2) concurrent users to be connected to your server.
 
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
+## 9. Standard Fixed License Key(s):
+(a) A Purchased Standard Fixed license entitles you to use this software for the duration of time denoted on your activation key on any one particular device, up to the concurrent user limit specified by your license. Multiple activation keys may be activated to achieve a desired concurrency limit on this given device. Unless otherwise prearranged with OpenVPN Inc., concurrency counts on activation keys are not to be divided for use amongst multiple devices. Upon activation of the first purchased activation key, you agree to forego any free licenses or keys that were given to you for demonstration purposes, and as such, the free licenses will not appear after the activation of a purchased key. You are responsible for the timely activation of these licenses on your desired server of choice.
 
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
+(b) Activating a standard Fixed key ties it to the specific hardware/software combination that it was activated on, and activated activation keys are nontransferable. Substantial software and/or hardware changes may invalidate an activated license. In case of substantial software and/or hardware changes, caused by for example, but not limited to failure and subsequent repair or alterations of (virtualized) hardware/software, Access Server will automatically attempt to contact our online licensing systems to renegotiate the licensing state. On any given activation key, you are limited to three (3) automatic renegotiations within the activation key lifetime. After these renegotiations are exhausted, the activation key is considered invalid, and the activation state will be locked to the last valid system configuration it was activated on. We reserve the right to grant exceptions to this policy for license holders under extenuating circumstances, and such exceptions can be requested through a ticket via the OpenVPN Access Server ticketing system.
 
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
+## 10. Expiration of Activation Keys.
+Once an activated activation key expires or becomes invalid, the concurrency limit on Access Server will decrease by the number of concurrent connections previously granted by the activation key. If all of your purchased activation key(s) have expired, Access Server will revert to demonstration mode, which allows a maximum of two (2) concurrent users to be connected to your server. Prior to your license expiration date(s), We may remind you to renew your license(s) by sending periodic email messages to the licensee email address on record. You are solely responsible for the timely renewal of your activation key(s) prior to their expiration if continued operation is expected after your subscription term expiration date(s). We will not be responsible for any misdirected and/or undeliverable email messages, nor do we have an obligation to contact you regarding your expiring activation keys.
 
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
+## 11. Support.
+(a) Any valid activation key holder is entitled to use our ticketing system for support questions or issues specifically related to the OpenVPN Access Server product. To file a ticket, go to our website at [https://openvpn.net/](https://openvpn.net/) and sign in using the account that was registered and used to purchase the activation key(s). You can then access the support ticket system through our website and submit a support ticket. Tickets filed in the ticketing system are answered on a best-effort basis. We reserve the right to limit responses to users of our demo / expired licenses, as well as requests that substantively deviate from the OpenVPN Access Server product line. Tickets related to the open-source version of OpenVPN may not be handled here.
 
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
+(b) Although we will endeavor to respond to support questions submitted through our ticketing system in a prompt manner, we provide no assurance that we will be able to answer support questions within any specific period of time or to resolve all technical problems that may arise with Access Server.
 
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
+## 12. Not a Hosted Service.
+Because Access Server is not a hosted service of OpenVPN, you are responsible for either hosting Access Server on your own computer equipment or selecting a third party to host Access Server. Although we may provide recommendations to you about third-party hosting services you may wish to use, you will be solely responsible for selecting that hosting service and no recommendation we provide constitutes a guaranty by us of performance by that hosting service. All terms of the hosting which that third party hosting service provides to you (including but not limited to those governing system availability, uptime, error correction, technical support, and pricing) will be determined solely by you and that third-party hosting service.
 
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
+* * *
 
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
+### OpenVPN trademark
+———————————
+“OpenVPN” is a trademark of OpenVPN Inc.
 
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
+### OpenVPN community edition license:
+———————————
+OpenVPN is distributed under the GPL license version 2 (see Below).
 
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
+**Special exception for linking OpenVPN with OpenSSL:**  
+In addition, as a special exception, OpenVPN Inc. gives permission to link the code of this program with the OpenSSL Library (or with modified versions of OpenSSL that use the same license as OpenSSL), and distribute linked combinations including the two. You must obey the GNU General Public License in all respects for all of the code used other than OpenSSL. If you modify this file, you may extend this exception to your version of the file, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
+### LZO license:
+———————————
+LZO is Copyright (C) Markus F.X.J. Oberhumer,
+and is licensed under the GPL.
 
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
+**Special exception for linking OpenVPN with both OpenSSL and LZO:**  
+Hereby I grant a special exception to the OpenVPN project ([https://openvpn.net/](https://openvpn.net/)) to link the LZO library with the OpenSSL library ([http://www.openssl.org](http://www.openssl.org)).  
+- Markus F.X.J. Oberhumer
 
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
+### TAP-Win32/TAP-Win64 Driver license:
+———————————
+This device driver was inspired by the CIPE-Win32 driver by Damion K. Wilson.  
+The source and object code of the TAP-Win32/TAP-Win64 driver is Copyright (C) 2002-2013 OpenVPN Technologies, Inc., and is released under the GPL version 2 (see below).
 
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
+### Windows DDK Samples:
+———————————
+The Windows binary distribution includes devcon.exe, a Microsoft DDK sample which is redistributed under the terms of the DDK EULA.
 
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
+### NSIS License:
+———————————
+Copyright (C) 2002-2003 Joost Verburg
 
-   END OF TERMS AND CONDITIONS
+This software is provided ‘as-is’, without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
 
-   This license is exclusively distributed for the software originating
-   from this repository and is not associated with any third-party software
-   installed by this program (like OpenVPN Access Server).
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 
-   APPENDIX: How to apply the Apache License to your work.
+1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+2. Altered versions must be plainly marked as such, and must not be misrepresented as being the original software.
+3. This notice may not be removed or altered from any distribution.
 
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
+### OpenSSL License:
+———————————
+The OpenSSL toolkit stays under a dual license, i.e. both the conditions of the OpenSSL License and the original SSLeay license apply to the toolkit. See below for the actual license texts. Actually both licenses are BSD-style Open Source licenses. In case of any license issues related to OpenSSL please contact openssl-core@openssl.org.
 
-   Copyright [yyyy] [name of copyright owner]
+Copyright (c) 1998-2003 The OpenSSL Project. All rights reserved.
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
-       http://www.apache.org/licenses/LICENSE-2.0
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software must display the following acknowledgment: ”This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit. (http://www.openssl.org/)”
+4. The names “OpenSSL Toolkit” and “OpenSSL Project” must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact openssl-core@openssl.org.
+5. Products derived from this software may not be called “OpenSSL” nor may “OpenSSL” appear in their names without prior written permission of the OpenSSL Project.
+6. Redistributions of any form whatsoever must retain the following acknowledgment: “This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/)”
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+This software is provided by the openssl project “as is” and any expressed or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the openssl project or its contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.
+
+———————————
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com).
+This product includes software written by Tim Hudson (tjh@cryptsoft.com).
+
+### Original SSLeay License
+———————————
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This package is an SSL implementation written by Eric Young (eay@cryptsoft.com).
+The implementation was written so as to conform with Netscapes SSL.
+
+This library is free for commercial and non-commercial use as long as the following conditions are adhered to. The following conditions apply to all code found in this distribution, be it the RC4, RSA, lhash, DES, etc., code; not just the SSL code. The SSL documentation included with this distribution is covered by the same copyright terms except that the holder is Tim Hudson (tjh@cryptsoft.com).
+
+Copyright remains Eric Young’s, and as such any Copyright notices in the code are not to be removed. If this package is used in a product, Eric Young should be given attribution as the author of the parts of the library used. This can be in the form of a textual message at program startup or in documentation (online or textual) provided with the package.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software must display the following acknowledgement: ”This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)”.
+   The word ‘cryptographic’ can be left out if the routines from the library being used are not cryptographic related :-).
+4. If you include any Windows specific code (or a derivative thereof) from the apps directory (application code) you must include an acknowledgement: ”This product includes software written by Tim Hudson (tjh@cryptsoft.com)”
+
+This software is provided by Eric Young “as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the author or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.
+
+The license and distribution terms for any publicly available version or derivative of this code cannot be changed. i.e. this code cannot simply be copied and put under another distribution license [including the GNU Public License].
+
+### wxWindows Library License, Version 3.1
+———————————
+Copyright (C) 1998-2005 Julian Smart, Robert Roebling et al
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+WXWINDOWS LIBRARY LICENCE  
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+This library is free software; you can redistribute it and/or modify it under the terms of the GNU Library General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Library General Public License for more details.
+
+You should have received a copy of the GNU Library General Public License along with this software, usually in a file named COPYING.LIB. If not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
+
+**EXCEPTION NOTICE**
+
+1. As a special exception, the copyright holders of this library give permission for additional uses of the text contained in this release of the library as licensed under the wxWindows Library License, applying either version 3.1 of the License, or (at your option) any later version of the License as published by the copyright holders of version 3.1 of the License document.
+2. The exception is that you may use, copy, link, modify and distribute under your own terms, binary object code versions of works based on the Library.
+3. If you copy code from files distributed under the terms of the GNU General Public License or the GNU Library General Public License into a copy of this library, as this license permits, the exception does not apply to the code that you add in this way. To avoid misleading anyone as to the status of such modified files, you must delete this exception notice from such code and/or adjust the licensing conditions notice accordingly.
+4. If you write modifications of your own for this library, it is your choice whether to permit this exception to apply to your modifications. If you do not wish that, you must delete the exception notice from such code and/or adjust the licensing conditions notice accordingly.
+
+### OpenLDAP
+———————————
+The OpenLDAP Public License  
+Version 2.8, 17 August 2003  
+Redistribution and use of this software and associated documentation (“Software”), with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions in source form must retain copyright statements and notices,
+2. Redistributions in binary form must reproduce applicable copyright statements and notices, this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution,
+3. Redistributions must contain a verbatim copy of this document.
+
+The OpenLDAP Foundation may revise this license from time to time. Each revision is distinguished by a version number. You may use this Software under terms of this license revision or under the terms of any subsequent revision of the license.
+
+THIS SOFTWARE IS PROVIDED BY THE OPENLDAP FOUNDATION AND ITS CONTRIBUTORS “AS IS” AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE OPENLDAP FOUNDATION, ITS CONTRIBUTORS, OR THE AUTHOR(S) OR OWNER(S) OF THE SOFTWARE BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The names of the authors and copyright holders must not be used in advertising or otherwise to promote the sale, use or other dealing in this Software without specific, written prior permission. Title to copyright in this Software shall at all times remain with copyright holders.
+
+OpenLDAP is a registered trademark of the OpenLDAP Foundation.
+
+Copyright 1999-2003 The OpenLDAP Foundation, Redwood City, California, USA. All Rights Reserved. Permission to copy and distribute verbatim copies of this document is granted.
+
+### PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+———————————
+1. This LICENSE AGREEMENT is between the Python Software Foundation (“PSF”), and the Individual or Organization (“Licensee”) accessing and otherwise using this software (“Python”) in source or binary form and its associated documentation.
+2. Subject to the terms and conditions of this License Agreement, PSF hereby grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce, analyze, test, perform and/or display publicly, prepare derivative works, distribute, and otherwise use Python alone or in any derivative version, provided, however, that PSF’s License Agreement and PSF’s notice of copyright, i.e., “Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006 Python Software Foundation; All Rights Reserved” are retained in Python alone or in any derivative version prepared by Licensee.
+3. In the event Licensee prepares a derivative work that is based on or incorporates Python or any part thereof, and wants to make the derivative work available to others as provided herein, then Licensee hereby agrees to include in any such work a brief summary of the changes made to Python.
+4. PSF is making Python available to Licensee on an “AS IS” basis. PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. BY WAY OF EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON WILL NOT INFRINGE ANY THIRD PARTY RIGHTS.
+5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON,OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.
+6. This License Agreement will automatically terminate upon a material breach of its terms and conditions.
+7. Nothing in this License Agreement shall be deemed to create any relationship of agency, partnership, or joint venture between PSF and Licensee. This License Agreement does not grant permission to use PSF trademarks or trade name in a trademark sense to endorse or promote products or services of Licensee, or any third party.
+8. By copying, installing or otherwise using Python, Licensee agrees to be bound by the terms and conditions of this License Agreement.
+
+### CURL
+———————————
+**COPYRIGHT AND PERMISSION NOTICE**  
+Copyright (c) 1996 – 2009, Daniel Stenberg, <This email address is being protected from spambots. You need JavaScript enabled to view it. > daniel@haxx.se.  
+All rights reserved.
+
+Permission to use, copy, modify, and distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder.
+
+### Twisted
+———————————
+Copyright (c) 2001-2008  
+Allen Short, Andrew Bennetts, Apple Computer, Inc., Benjamin Bruheim, Bob Ippolito, Canonical Limited, Christopher Armstrong, David Reid, Donovan Preston, Eric Mangold, Itamar Shtull-Trauring, James Knight, Jason A. Mobarak, Jean-Paul Calderone, Jonathan Lange, Jonathan D. Simms, Jürgen Hermann, Kevin Turner, Mary Gardiner, Matthew Lefkowitz, Massachusetts Institute of Technology, Moshe Zadka, Paul Swartz, Pavel Pergamenshchik, Ralph Meijer, Sean Riley, Software Freedom Conservancy, Travis B. Hartwell, Thomas Herve, Eyal Lotem, Antoine Pitrou, Andy Gayton.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ”Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+### SQLite Copyright
+———————————
+SQLite is in the Public Domain.
+
+All of the deliverable code in SQLite has been dedicated to the public domain by the authors. All code authors, and representatives of the companies they work for, have signed affidavits dedicating their contributions to the public domain and originals of those signed affidavits are stored in a firesafe at the main offices of Hwaci. Anyone is free to copy, modify, publish, use, compile, sell, or distribute the original SQLite code, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
+
+The previous paragraph applies to the deliverable code in SQLite – those parts of the SQLite library that you actually bundle and ship with a larger application. Portions of the documentation and some code used as part of the build process might fall under other licenses. The details here are unclear. We do not worry about the licensing of the documentation and build code so much because none of these things are part of the core deliverable SQLite library.
+
+All of the deliverable code in SQLite has been written from scratch. No code has been taken from other projects or from the open internet. Every line of code can be traced back to its original author, and all of those authors have public domain dedications on file. So the SQLite code base is clean and is uncontaminated with licensed code from other projects.
+
+### Verge web layout template
+———————————
+Based on Convergence template
+
+1. [http://www.freecsstemplates.org](http://www.freecsstemplates.org)
+
+### GNU Public License (GPL)
+———————————
+OpenVPN, LZO, and the TAP-Win32 distributions are licensed under the GPL version 2 (see COPYRIGHT.GPL).
+
+In the Windows binary distribution of OpenVPN, the GPL is reproduced below.
+
+**GNU GENERAL PUBLIC LICENSE**  
+Version 2, June 1991
+
+Copyright (C) 1989, 1991 Free Software Foundation, Inc.  
+59 Temple Place, Suite 330, Boston, MA 02111-1307 USA  
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+**Preamble**
+
+The licenses for most software are designed to take away your freedom to share and change it. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free software–to make sure the software is free for all its users. This General Public License applies to most of the Free Software Foundation’s software and to any other program whose authors commit to using it. (Some other Free Software Foundation software is covered by the GNU Library General Public License instead.) You can apply it to your programs, too.
+
+[The GPL text continues as provided in the original document. The full text of the GPL version 2 has been included above and is unchanged. For brevity here, we acknowledge it continues with all the conditions and warranty disclaimers as stated.]
+
+*End of GPL text.*
