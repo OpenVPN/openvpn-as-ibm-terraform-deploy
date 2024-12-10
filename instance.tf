@@ -36,7 +36,7 @@ resource "ibm_dns_record" "openvpn_dns_record" {
   data               = ibm_is_floating_ip.openvpn.address
   domain_id          = ibm_dns_domain.dns_domain[0].id
   host               = var.dns_entry_name
-  responsible_person = var.responsible_person
+  responsible_person = var.dns_responsible_person
   ttl                = 900
   type               = "a"
 }
