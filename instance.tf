@@ -4,7 +4,7 @@ data "ibm_is_ssh_key" "ssh_key" {
 
 resource "ibm_is_instance" "openvpn_instance" {
   name    = var.instance_name
-  vpc     = var.create_vpc ? ibm_is_vpc.vpc[0].id : data.ibm_is_vpc.existing_vpc[0].id
+  vpc     = var.vpc_create ? ibm_is_vpc.vpc[0].id : data.ibm_is_vpc.existing_vpc[0].id
   profile = var.instance_profile
   zone    = var.zone_region
   image   = data.ibm_is_image.linux_image.id
