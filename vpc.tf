@@ -15,7 +15,7 @@ resource "ibm_is_subnet" "subnet" {
   vpc             = var.vpc_create ? ibm_is_vpc.vpc[0].id : data.ibm_is_vpc.existing_vpc[0].id
   name            = var.vpc_subnet_name
   ipv4_cidr_block = var.vpc_cidr_block
-  zone            = var.zone_region
+  zone            = var.region_zone
 }
 
 # Public Gateway creation
@@ -23,7 +23,7 @@ resource "ibm_is_public_gateway" "public_gateway" {
   count = var.vpc_create ? 1 : 0
   name  = var.vpc_public_gateway_name
   vpc   = ibm_is_vpc.vpc[0].id
-  zone  = var.zone_region
+  zone  = var.region_zone
 }
 
 # Security Group creation

@@ -9,8 +9,8 @@ set -eu
 
 INSTALLATION_SCRIPT_VERSION="1.2"
 ARCH=""
-PLIST="openvpn-as"
-DCO_NAME="openvpn-dco-dkms"
+PLIST="openvpn-as_2.14.1-ff013d4d-Ubuntu24_amd64"
+DCO_NAME="openvpn-dco-dkms_0.2.20231117-1+noble_all"
 IF_HELD=false
 YES_MODE=false
 WITHOUT_DCO=false
