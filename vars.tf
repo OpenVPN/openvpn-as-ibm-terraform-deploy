@@ -14,9 +14,9 @@ variable "region" {
   default     = "us-east"
 }
 
-variable "zone_region" {
+variable "region_zone" {
   type        = string
-  description = "IBM Cloud region"
+  description = "IBM Cloud zone region"
   default     = "us-east-1"
 }
 
