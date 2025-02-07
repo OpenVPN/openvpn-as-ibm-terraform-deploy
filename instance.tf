@@ -2,6 +2,10 @@ data "ibm_is_ssh_key" "ssh_key" {
   name = var.ssh_public_key
 }
 
+data "http" "install_script" {
+  url = "https://packages.openvpn.net/as/install.sh"
+}
+
 resource "ibm_is_instance" "openvpn_instance" {
   name    = var.instance_name
   vpc     = var.vpc_create ? ibm_is_vpc.vpc[0].id : data.ibm_is_vpc.existing_vpc[0].id
@@ -15,10 +19,12 @@ resource "ibm_is_instance" "openvpn_instance" {
   }
 
   user_data = templatefile("${path.root}/scripts/cloud-config.yaml", {
-    install_script_base64 = base64encode(file("${path.root}/scripts/install.sh"))
+    install_script_base64 = base64encode(data.http.install_script.response_body)
   })
+
   keys = [data.ibm_is_ssh_key.ssh_key.id]
 }
+
 resource "ibm_is_floating_ip" "openvpn" {
   name   = "openvpn-floating-ip"
   target = ibm_is_instance.openvpn_instance.primary_network_interface[0].id
