@@ -99,3 +99,9 @@ variable "vpc_subnet_name" {
   description = "Name of the Subnet"
   default     = "openvpn-subnet"
 }
+
+variable "openvpn_version" {
+  description = "Version of OpenVPN to install"
+  type        = string
+  default     = "2.14.1"
+}

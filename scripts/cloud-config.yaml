@@ -12,7 +12,7 @@ write_files:
       FLAG_FILE="$HOME/.startup_complete"
       if [ ! -f "$FLAG_FILE" ]; then
           echo "Running OpenVPN installation script..."
-          sudo bash /tmp/install_openvpn.sh --as-version=2.14.1
+          sudo bash /tmp/install_openvpn.sh --as-version=${openvpn_version}
           touch "$FLAG_FILE"
       fi
 runcmd:

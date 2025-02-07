@@ -10,5 +10,5 @@ output "openvpn_instance_id" {
 
 output "dns_record" {
   description = "The DNS record of the OpenVPN server"
-  value = "${var.dns_entry_name}.${var.dns_domain_name}"
+  value       = "${var.dns_entry_name}.${var.dns_domain_name}"
 }
