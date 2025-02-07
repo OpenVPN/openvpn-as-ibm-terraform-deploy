@@ -5,7 +5,6 @@ write_files:
     encoding: base64
     content: |
       ${install_script_base64}
-
   - path: /etc/profile.d/startup.sh
     permissions: '0755'
     content: |
@@ -13,10 +12,8 @@ write_files:
       FLAG_FILE="$HOME/.startup_complete"
       if [ ! -f "$FLAG_FILE" ]; then
           echo "Running OpenVPN installation script..."
-          sudo bash /tmp/install_openvpn.sh
+          sudo bash /tmp/install_openvpn.sh --as-version=2.14.1
           touch "$FLAG_FILE"
       fi
-
 runcmd:
   - sudo chmod +x /tmp/install_openvpn.sh
-
