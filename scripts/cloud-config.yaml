@@ -1,19 +1,11 @@
 #cloud-config
 write_files:
-  - path: /tmp/install_openvpn.sh
-    permissions: '0755'
-    encoding: base64
-    content: |
-      ${install_script_base64}
   - path: /etc/profile.d/startup.sh
     permissions: '0755'
-    content: |
+    content: |-
       #!/bin/bash
       FLAG_FILE="$HOME/.startup_complete"
       if [ ! -f "$FLAG_FILE" ]; then
           echo "Running OpenVPN installation script..."
-          sudo bash /tmp/install_openvpn.sh --as-version=2.14.2 --yes
-          touch "$FLAG_FILE"
+          sudo  bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=2.14.2
       fi
-runcmd:
-  - sudo chmod +x /tmp/install_openvpn.sh
