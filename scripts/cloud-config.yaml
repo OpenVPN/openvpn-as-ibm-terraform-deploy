@@ -2,7 +2,7 @@
 write_files:
   - path: /etc/profile.d/startup.sh
     permissions: '0755'
-    content: |-
+    content: |
       #!/bin/bash
       FLAG_FILE="$HOME/.startup_complete"
       if [ ! -f "$FLAG_FILE" ]; then
