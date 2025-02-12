@@ -2,10 +2,6 @@ data "ibm_is_ssh_key" "ssh_key" {
   name = var.ssh_public_key
 }
 
-data "http" "install_script" {
-  url = "https://packages.openvpn.net/as/install.sh"
-}
-
 resource "ibm_is_instance" "openvpn_instance" {
   name    = var.instance_name
   vpc     = var.vpc_create ? ibm_is_vpc.vpc[0].id : data.ibm_is_vpc.existing_vpc[0].id
@@ -18,9 +14,7 @@ resource "ibm_is_instance" "openvpn_instance" {
     security_groups = [ibm_is_security_group.sg.id]
   }
 
-  user_data = templatefile("${path.root}/scripts/cloud-config.yaml", {
-    install_script_base64 = base64encode(data.http.install_script.response_body)
-  })
+  user_data = templatefile("${path.root}/scripts/cloud-config.yaml", {})
 
   keys = [data.ibm_is_ssh_key.ssh_key.id]
 }
