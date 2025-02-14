@@ -1,35 +1,35 @@
 # VPC creation
 resource "ibm_is_vpc" "vpc" {
-  count = var.vpc_create ? 1 : 0
-  name  = var.vpc_name
+  count = var.vpc_existing_name != "" ? 0 : 1
+  name  = "${var.prefix}-vpc"
 }
 
 # Use either created or existing VPC
 data "ibm_is_vpc" "existing_vpc" {
-  count = var.vpc_create ? 0 : 1
+  count = var.vpc_existing_name != "" ? 1 : 0
   name  = var.vpc_existing_name
 }
 
 # Subnet creation
 resource "ibm_is_subnet" "subnet" {
-  vpc             = var.vpc_create ? ibm_is_vpc.vpc[0].id : data.ibm_is_vpc.existing_vpc[0].id
-  name            = var.vpc_subnet_name
-  ipv4_cidr_block = var.vpc_cidr_block
-  zone            = var.region_zone
+  vpc                      = var.vpc_existing_name != "" ? data.ibm_is_vpc.existing_vpc[0].id : ibm_is_vpc.vpc[0].id
+  name                     = "${var.prefix}-subnet"
+  total_ipv4_address_count = 256
+  zone                     = var.region_zone
 }
 
 # Public Gateway creation
 resource "ibm_is_public_gateway" "public_gateway" {
-  count = var.vpc_create ? 1 : 0
-  name  = var.vpc_public_gateway_name
+  count = var.vpc_existing_name != "" ? 0 : 1
+  name  = "${var.prefix}-pgw"
   vpc   = ibm_is_vpc.vpc[0].id
   zone  = var.region_zone
 }
 
 # Security Group creation
 resource "ibm_is_security_group" "sg" {
-  name = var.vpc_security_group_name
-  vpc  = var.vpc_create ? ibm_is_vpc.vpc[0].id : data.ibm_is_vpc.existing_vpc[0].id
+  name = "${var.prefix}-sg"
+  vpc  = var.vpc_existing_name != "" ? data.ibm_is_vpc.existing_vpc[0].id : ibm_is_vpc.vpc[0].id
 }
 
 resource "ibm_is_security_group_rule" "allow_tcp_22" {
