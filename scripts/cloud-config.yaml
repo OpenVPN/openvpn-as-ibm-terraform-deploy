@@ -2,4 +2,4 @@
 packages:
   - curl
 runcmd:
-  - "bash -c 'bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=2.14.2'"
+  - "bash -c 'bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=2.14.3'"
