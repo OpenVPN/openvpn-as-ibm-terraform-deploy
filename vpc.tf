@@ -68,18 +68,6 @@ resource "ibm_is_security_group_rule" "allow_tcp_943" {
   }
 }
 
-resource "ibm_is_security_group_rule" "allow_tcp_945" {
-  direction  = "inbound"
-  group      = ibm_is_security_group.sg.id
-  ip_version = "ipv4"
-  remote     = "0.0.0.0/0"
-
-  tcp {
-    port_min = 945
-    port_max = 945
-  }
-}
-
 resource "ibm_is_security_group_rule" "allow_udp_1194" {
   direction  = "inbound"
   group      = ibm_is_security_group.sg.id
