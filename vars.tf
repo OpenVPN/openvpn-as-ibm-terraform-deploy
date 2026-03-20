@@ -23,7 +23,7 @@ variable "instance_profile" {
 
 variable "image_name" {
   type        = string
-  default     = "ibm-ubuntu-24-04-3-minimal-amd64-4"
+  default     = "ibm-ubuntu-24-04-4-minimal-amd64-2"
   description = "Image name for the Linux server"
 }
 
