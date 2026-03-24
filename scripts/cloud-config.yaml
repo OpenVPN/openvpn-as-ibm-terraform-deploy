@@ -2,4 +2,14 @@
 packages:
   - curl
 runcmd:
-  - "bash -c 'bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=3.1.0'"
+  - |
+    bash -c 'bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=3.1.0'
+
+    apt-mark hold openvpn-as
+
+    until sacli status 2>/dev/null |grep -q '"api": "on"'
+    do
+        sleep 2
+    done
+    sacli --key "host.name" --value "$(sacli IP)" ConfigPut
+    sacli start
