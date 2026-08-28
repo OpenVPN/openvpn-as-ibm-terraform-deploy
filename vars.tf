@@ -56,3 +56,9 @@ variable "vpc_existing_name" {
   description = "The name of the existing VPC to use when vpc_create is set to false."
   default     = ""
 }
+
+variable "enable_letsencrypt" {
+  type        = bool
+  description = "Automatically request and install a Let's Encrypt TLS certificate for the instance's public (floating) IP address."
+  default     = true
+}

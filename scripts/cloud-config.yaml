@@ -3,13 +3,62 @@ packages:
   - curl
 runcmd:
   - |
-    bash -c 'bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=3.1.0'
+    if [ -f /usr/local/openvpn_as/etc/as.conf ]; then
+        exit 0
+    fi
 
+    echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+    dpkg-reconfigure -f noninteractive unattended-upgrades
+
+    bash -c 'bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=3.2.2'
     apt-mark hold openvpn-as
 
-    until sacli status 2>/dev/null |grep -q '"api": "on"'
-    do
-        sleep 2
+    SACLI="/usr/local/openvpn_as/scripts/sacli"
+
+    for i in $(seq 1 60); do
+        status="$("$SACLI" status 2>/dev/null)"
+        echo "$status" | grep -q '"api": "on"' && break
+        sleep 1
     done
-    sacli --key "host.name" --value "$(sacli IP)" ConfigPut
-    sacli start
+
+    if PUBLIC_IP="$("$SACLI" IP)" && [ -n "$PUBLIC_IP" ] && printf '%s' "$PUBLIC_IP" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$'; then
+        PUBLIC_IP_VALID=true
+    else
+        PUBLIC_IP_VALID=false
+    fi
+
+    if $PUBLIC_IP_VALID; then
+        "$SACLI" --key "host.name" --value "$PUBLIC_IP" ConfigPut
+    else
+        echo "Warning: sacli IP did not return a usable IPv4 address ('$PUBLIC_IP'); leaving host.name unset."
+    fi
+    "$SACLI" --user openvpn --new_pass "${admin_password}" SetLocalPassword
+    "$SACLI" --key "dnsproxy.mode" --value "always" ConfigPut
+    "$SACLI" --key "vpn.client.routing.reroute_dns" --value "true" ConfigPut
+    "$SACLI" --key "vpn.client.routing.reroute_gw" --value "true" ConfigPut
+
+    %{ if enable_letsencrypt ~}
+    if $PUBLIC_IP_VALID; then
+        "$SACLI" --key "acme.ip_addresses.0" --value "$PUBLIC_IP" ConfigPut
+        "$SACLI" --key "acme.cert_profile" --value "shortlived" ConfigPut
+    else
+        echo "Let's Encrypt: no usable public IPv4 detected; skipping (self-signed certificate remains)."
+    fi
+    %{ endif ~}
+
+    "$SACLI" start
+
+    %{ if enable_letsencrypt ~}
+    if $PUBLIC_IP_VALID; then
+        echo y | "$SACLI" AcmeRegisterAccount >/dev/null
+        "$SACLI" AcmeRequestCertificate
+
+        CERT_PEM="$("$SACLI" ConfigQuery 2>/dev/null | grep cs.cert | cut -d '"' -f 4 | sed 's/\\n/\n/g')"
+        if printf '%s' "$CERT_PEM" | openssl x509 -noout -issuer 2>/dev/null | grep -q "Let's Encrypt" \
+          && printf '%s' "$CERT_PEM" | openssl x509 -noout -ext subjectAltName 2>/dev/null | grep -q "IP Address:$${PUBLIC_IP}"; then
+            echo "Access Server is configured with a Let's Encrypt certificate for $${PUBLIC_IP}."
+        else
+            echo "Let's Encrypt certificate request completed, but verification failed; self-signed certificate may still be active."
+        fi
+    fi
+    %{ endif ~}
