@@ -37,11 +37,9 @@ resource "ibm_is_security_group_rule" "allow_tcp_22" {
   group      = ibm_is_security_group.sg.id
   ip_version = "ipv4"
   remote     = "0.0.0.0/0"
-
-  tcp {
-    port_min = 22
-    port_max = 22
-  }
+  protocol   = "tcp"
+  port_min   = 22
+  port_max   = 22
 }
 
 resource "ibm_is_security_group_rule" "allow_tcp_443" {
@@ -49,11 +47,9 @@ resource "ibm_is_security_group_rule" "allow_tcp_443" {
   group      = ibm_is_security_group.sg.id
   ip_version = "ipv4"
   remote     = "0.0.0.0/0"
-
-  tcp {
-    port_min = 443
-    port_max = 443
-  }
+  protocol   = "tcp"
+  port_min   = 443
+  port_max   = 443
 }
 
 resource "ibm_is_security_group_rule" "allow_tcp_943" {
@@ -61,11 +57,9 @@ resource "ibm_is_security_group_rule" "allow_tcp_943" {
   group      = ibm_is_security_group.sg.id
   ip_version = "ipv4"
   remote     = "0.0.0.0/0"
-
-  tcp {
-    port_min = 943
-    port_max = 943
-  }
+  protocol   = "tcp"
+  port_min   = 943
+  port_max   = 943
 }
 
 resource "ibm_is_security_group_rule" "allow_udp_1194" {
@@ -73,11 +67,9 @@ resource "ibm_is_security_group_rule" "allow_udp_1194" {
   group      = ibm_is_security_group.sg.id
   ip_version = "ipv4"
   remote     = "0.0.0.0/0"
-
-  udp {
-    port_min = 1194
-    port_max = 1194
-  }
+  protocol   = "udp"
+  port_min   = 1194
+  port_max   = 1194
 }
 
 resource "ibm_is_security_group_rule" "allow_all_outbound" {
