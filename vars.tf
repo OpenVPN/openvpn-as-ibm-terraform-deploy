@@ -23,7 +23,7 @@ variable "instance_profile" {
 
 variable "image_name" {
   type        = string
-  default     = "ibm-ubuntu-24-04-4-minimal-amd64-2"
+  default     = "ibm-ubuntu-24-04-4-minimal-amd64-7"
   description = "Image name for the Linux server"
 }
 
@@ -55,4 +55,10 @@ variable "vpc_existing_name" {
   type        = string
   description = "The name of the existing VPC to use when vpc_create is set to false."
   default     = ""
+}
+
+variable "enable_letsencrypt" {
+  type        = bool
+  description = "Automatically request and install a Let's Encrypt TLS certificate for the instance's public (floating) IP address."
+  default     = true
 }

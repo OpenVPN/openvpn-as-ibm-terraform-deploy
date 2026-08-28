@@ -6,6 +6,11 @@ data "ibm_is_image" "linux_image" {
   name = var.image_name
 }
 
+resource "random_password" "admin" {
+  length           = 12
+  override_special = "!@#$%^&*()-_=+"
+}
+
 resource "ibm_is_instance" "openvpn_instance" {
   name    = "${var.prefix}-server"
   vpc     = var.vpc_existing_name != "" ? data.ibm_is_vpc.existing_vpc[0].id : ibm_is_vpc.vpc[0].id
@@ -18,7 +23,10 @@ resource "ibm_is_instance" "openvpn_instance" {
     security_groups = [ibm_is_security_group.sg.id]
   }
 
-  user_data = templatefile("${path.root}/scripts/cloud-config.yaml", {})
+  user_data = templatefile("${path.root}/scripts/cloud-config.yaml", {
+    enable_letsencrypt = var.enable_letsencrypt
+    admin_password     = random_password.admin.result
+  })
 
   keys = [data.ibm_is_ssh_key.ssh_key.id]
 }
@@ -26,6 +34,10 @@ resource "ibm_is_instance" "openvpn_instance" {
 resource "ibm_is_floating_ip" "floating_ip" {
   name   = "${var.prefix}-floating-ip"
   target = ibm_is_instance.openvpn_instance.primary_network_interface[0].id
+}
+
+locals {
+  public_ip = ibm_is_floating_ip.floating_ip.address
 }
 
 resource "ibm_dns_domain" "dns_domain" {
