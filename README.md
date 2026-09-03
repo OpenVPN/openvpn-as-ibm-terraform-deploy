@@ -33,7 +33,7 @@ This Terraform project automates the deployment of an **OpenVPN Access Server** 
 | `openvpn_instance_id` | The instance ID of the OpenVPN server. |
 | `dns_record` | The configured DNS record, or empty if none was configured. |
 | `admin_user` | OpenVPN Access Server admin username (`openvpn`). |
-| `admin_password` | Randomly generated admin password (sensitive). |
+| `admin_password` | Randomly generated admin password. |
 | `admin_url` | URL for the Access Server admin web UI. |
 | `site_url` | URL for the Access Server client web UI. |
 

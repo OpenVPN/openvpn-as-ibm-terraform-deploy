@@ -20,8 +20,7 @@ output "admin_user" {
 
 output "admin_password" {
   description = "OpenVPN Access Server admin password."
-  value       = random_password.admin.result
-  sensitive   = true
+  value       = nonsensitive(random_password.admin.result)
 }
 
 output "admin_url" {
