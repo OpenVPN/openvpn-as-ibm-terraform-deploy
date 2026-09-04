@@ -13,6 +13,13 @@ runcmd:
     bash -c 'bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=3.2.2'
     apt-mark hold openvpn-as
 
+    . /usr/local/openvpn_as/etc/VERSION
+    printf '%s\n' "OpenVPN Access Server Appliance $AS_VERSION \n \l" > /etc/issue
+    cat > /etc/update-motd.d/00-header <<HEADER
+    #!/bin/sh
+    echo "Welcome to OpenVPN Access Server Appliance $AS_VERSION"
+    HEADER
+
     SACLI="/usr/local/openvpn_as/scripts/sacli"
 
     for i in $(seq 1 60); do
