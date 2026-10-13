@@ -17,7 +17,7 @@ This Terraform project automates the deployment of an **OpenVPN Access Server** 
 | `region` | IBM Cloud region name. | `us-east` |
 | `region_zone` | Availability zone within the specified region. | `us-east-1` |
 | `instance_profile` | VM size and family profile. | `cx2-2x4` |
-| `image_name` | Image name for the Linux server. | `ibm-ubuntu-24-04-4-minimal-amd64-7` |
+| `image_name` | Image name for the Linux server. | `ibm-ubuntu-26-04-1-minimal-amd64-1` |
 | `ssh_public_key` | Pre-created SSH public key name for instance access. | `""` |
 | `vpc_existing_name` | Name of an existing VPC to use instead of creating one. | `""` |
 | `enable_letsencrypt` | Automatically request a Let's Encrypt TLS certificate for the instance's public IP. Self-skips if no public IP is detected. | `true` |
