@@ -10,7 +10,7 @@ runcmd:
     echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
     dpkg-reconfigure -f noninteractive unattended-upgrades
 
-    bash -c 'bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=3.2.2'
+    bash -c 'bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes --as-version=3.2.3'
     apt-mark hold openvpn-as
 
     . /usr/local/openvpn_as/etc/VERSION
@@ -41,8 +41,6 @@ runcmd:
     fi
     "$SACLI" --user openvpn --new_pass "${admin_password}" SetLocalPassword
     "$SACLI" --key "dnsproxy.mode" --value "always" ConfigPut
-    "$SACLI" --key "vpn.client.routing.reroute_dns" --value "true" ConfigPut
-    "$SACLI" --key "vpn.client.routing.reroute_gw" --value "true" ConfigPut
 
     %{ if enable_letsencrypt ~}
     if $PUBLIC_IP_VALID; then
